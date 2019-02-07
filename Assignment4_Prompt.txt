@@ -1,0 +1,9 @@
+Your goal in this assignment is not to implement any major new code, but to investigate the performance of a computer's file system. This is intended to help give perspective on I/O speed before we start tackling that material in the main course. The question we are attempting to answer could be described as: "How quickly can a file system handle requests from a user process?" This is rather vague, so specifically, you are expected to offer an answer for one question: "What is the performance of a specific user workload on file system performance?"
+
+
+In this question "user workload" refers to the requests being made upon the filesystem through the system call interface. The question implies that differences in such a request pattern result in differences in the filesystem's perceived performance. This requires that you start by deciding on a characteristic workload. A simple example of this is to decide on the degree of randomness or sequentiality of the workload. In that case, one way to answer this question is to generate files of different sizes, and to read or write those files in their entirety using either a sequential pattern (reading a file from beginning to end), or a random pattern (reading a bytes from random locations by making use of the "lseek" call). You could generate such test files by writing random data to a set of files, either through a very simple C program or through use of Unix command line tools (like piping the output of /dev/random through the "head" command, or by using the "dd" command instead). You are free to use whatever tools and code you wish to answer this question, but all submitted materials should be testable on lab systems and included as part of your submission where possible.
+
+
+Please note that the answer to this question cannot reasonably be taken to be a single number, and that is why we recommend that you run such an experiment on files of different sizes.
+
+Good Luck!
